@@ -1,0 +1,34 @@
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="anno.js" type="text/javascript"></script>
+<script src="jquery.scrollintoview.min.js" type="text/javascript"></script>
+<link href="anno.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div style="background-color='gray'; margin-left:33%;">
+<b><i>Use this guided tour to see our latest features!</i></b>
+<br/>
+<button type="button" class="btn btn-default" onclick="anno.show();">Show Tour</button>
+<br/>
+<br/>
+<div id="demo" style="width:27%;">
+Your new login button is here: <button name="LOGIN" value="LOGIN">LOGIN</button>
+<div>
+</div>
+<br />
+</body>
+<script>
+	var anno =  new Anno([{
+	  target: '#demo',
+	  position:'left',
+	  content: "This is our shiny new left div edge!",
+	  buttons: [AnnoButton.NextButton]
+	}, {
+	  target: '#demo',
+	  position:'right',
+	  content: "...and on the right...",
+	  buttons: [AnnoButton.BackButton]
+	}]);	
+</script>
+<html>
